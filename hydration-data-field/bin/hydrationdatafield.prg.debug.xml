@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<debugInfo>
+    <manifest filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/manifest.xml"/>
+    <pcToLineNum>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldApp.mc" id="1" lineNum="26" parent="globals" pc="268435460" symbol="getApp"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldApp.mc" id="1" lineNum="27" parent="globals" pc="268435470" symbol="getApp"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="2" lineNum="6" parent="globals/hydration_data_fieldView" pc="268435486" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/bin/gen/006-B3121-00/source/Rez.mcgen" id="3" lineNum="7" parent="globals/Rez" pc="268435505" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldApp.mc" id="4" lineNum="5" parent="globals/hydration_data_fieldApp" pc="268435529" symbol="&lt;init&gt;"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="5" lineNum="33" parent="globals/hydration_data_fieldView" pc="268435548" symbol="compute"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="5" lineNum="35" parent="globals/hydration_data_fieldView" pc="268435552" symbol="compute"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="5" lineNum="36" parent="globals/hydration_data_fieldView" pc="268435577" symbol="compute"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="5" lineNum="37" parent="globals/hydration_data_fieldView" pc="268435603" symbol="compute"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="5" lineNum="38" parent="globals/hydration_data_fieldView" pc="268435623" symbol="compute"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="5" lineNum="39" parent="globals/hydration_data_fieldView" pc="268435644" symbol="compute"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="6" lineNum="42" parent="globals/hydration_data_fieldView" pc="268435653" symbol="determine_state"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="6" lineNum="43" parent="globals/hydration_data_fieldView" pc="268435657" symbol="determine_state"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="6" lineNum="44" parent="globals/hydration_data_fieldView" pc="268435676" symbol="determine_state"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="6" lineNum="45" parent="globals/hydration_data_fieldView" pc="268435699" symbol="determine_state"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="6" lineNum="48" parent="globals/hydration_data_fieldView" pc="268435711" symbol="determine_state"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="6" lineNum="49" parent="globals/hydration_data_fieldView" pc="268435733" symbol="determine_state"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="6" lineNum="50" parent="globals/hydration_data_fieldView" pc="268435753" symbol="determine_state"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="6" lineNum="51" parent="globals/hydration_data_fieldView" pc="268435785" symbol="determine_state"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="6" lineNum="53" parent="globals/hydration_data_fieldView" pc="268435805" symbol="determine_state"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="6" lineNum="54" parent="globals/hydration_data_fieldView" pc="268435810" symbol="determine_state"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="6" lineNum="56" parent="globals/hydration_data_fieldView" pc="268435819" symbol="determine_state"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="7" lineNum="24" parent="globals/hydration_data_fieldView" pc="268435826" symbol="initialize"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="7" lineNum="25" parent="globals/hydration_data_fieldView" pc="268435828" symbol="initialize"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" id="7" lineNum="26" parent="globals/hydration_data_fieldView" pc="268435846" symbol="initialize"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldApp.mc" id="8" lineNum="12" parent="globals/hydration_data_fieldApp" pc="268435860" symbol="onStart"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldApp.mc" id="9" lineNum="20" parent="globals/hydration_data_fieldApp" pc="268435863" symbol="getInitialView"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldApp.mc" id="9" lineNum="21" parent="globals/hydration_data_fieldApp" pc="268435865" symbol="getInitialView"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldApp.mc" id="10" lineNum="7" parent="globals/hydration_data_fieldApp" pc="268435906" symbol="initialize"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldApp.mc" id="10" lineNum="8" parent="globals/hydration_data_fieldApp" pc="268435908" symbol="initialize"/>
+        <entry filename="/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldApp.mc" id="11" lineNum="16" parent="globals/hydration_data_fieldApp" pc="268435927" symbol="onStop"/>
+    </pcToLineNum>
+    <symbolTable>
+        <entry id="8388639" module="true" symbol="Graphics"/>
+        <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
+        <entry field="true" id="8388611" module="true" symbol="Toybox"/>
+        <entry field="true" id="10" symbol="AppName"/>
+        <entry id="4" module="true" symbol="globals/Rez/Strings"/>
+        <entry id="8388631" module="true" symbol="Activity"/>
+        <entry id="8388648" module="true" symbol="WatchUi"/>
+        <entry id="2" module="true" symbol="globals/Rez"/>
+        <entry field="true" id="7" symbol="&lt;globals/hydration_data_fieldView/&lt;&gt;_display_state&gt;"/>
+        <entry id="8388771" module="true" object="true" symbol="Drawables"/>
+        <entry id="8389275" method="true" symbol="getApp"/>
+        <entry id="8389137" method="true" symbol="compute"/>
+        <entry id="6" object="true" symbol="hydration_data_fieldView"/>
+        <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
+        <entry id="8" method="true" symbol="determine_state"/>
+        <entry id="8388645" module="true" symbol="Time"/>
+        <entry id="8388769" module="true" object="true" symbol="Rez"/>
+        <entry id="8388640" module="true" symbol="Lang"/>
+        <entry field="true" id="9" symbol="LauncherIcon"/>
+        <entry id="8388610" symbol="statics"/>
+        <entry id="5" object="true" symbol="hydration_data_fieldApp"/>
+        <entry id="8389350" module="true" symbol="globals"/>
+        <entry id="8388770" module="true" object="true" symbol="Strings"/>
+        <entry id="8388702" method="true" symbol="initialize"/>
+        <entry id="8389279" method="true" symbol="onStart"/>
+        <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="8388635" module="true" symbol="Application"/>
+    </symbolTable>
+    <localVars>
+        <entry arg="true" endPc="268435652" name="info" stackId="1" startPc="268435548"/>
+        <entry endPc="268435652" name="timer_seconds" stackId="2" startPc="268435552"/>
+        <entry arg="true" endPc="268435825" name="timer_sec" stackId="1" startPc="268435653"/>
+        <entry endPc="268435824" name="should_show_first_report" stackId="2" startPc="268435657"/>
+    </localVars>
+    <deviceInfo partNumber="006-B3121-00"/>
+    <annotations>
+        <annotationEntry annotation="initialized" class="Drawables" module="globals/Rez" symbol="LauncherIcon"/>
+        <annotationEntry annotation="initialized" class="Strings" module="globals/Rez" symbol="AppName"/>
+    </annotations>
+    <dataEntryOffsetMappings>
+        <dataEntry label="globals" offset="55" parentId="" symbolId="globals" type="module"/>
+        <dataEntry label="globals/hydration_data_fieldView" offset="126" parentId="globals" symbolId="hydration_data_fieldView" type="class"/>
+        <dataEntry label="globals/Rez" offset="197" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry label="globals/hydration_data_fieldApp" offset="244" parentId="globals" symbolId="hydration_data_fieldApp" type="class"/>
+        <dataEntry label="globals/Rez/Drawables" offset="315" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry label="globals/Rez/Strings" offset="354" parentId="Rez" symbolId="Strings" type="module"/>
+    </dataEntryOffsetMappings>
+    <functions>
+        <functionEntry accessMode="public" endPc="268435485" name="getApp" startPc="268435460">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435504" name="&lt;init&gt;" parent="hydration_data_fieldView" startPc="268435486">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435528" name="&lt;init&gt;" parent="Rez" startPc="268435505">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435547" name="&lt;init&gt;" parent="hydration_data_fieldApp" startPc="268435529">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435652" name="compute" parent="hydration_data_fieldView" startPc="268435548">
+            <param id="info"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435825" name="determine_state" parent="hydration_data_fieldView" startPc="268435653">
+            <param id="timer_sec"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435859" name="initialize" parent="hydration_data_fieldView" startPc="268435826">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Drawables">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="&lt;init&gt;" parent="Strings">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435862" name="onStart" parent="hydration_data_fieldApp" startPc="268435860">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435905" name="getInitialView" parent="hydration_data_fieldApp" startPc="268435863">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435926" name="initialize" parent="hydration_data_fieldApp" startPc="268435906">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" endPc="268435929" name="onStop" parent="hydration_data_fieldApp" startPc="268435927">
+            <param id="state"/>
+            <documentation/>
+        </functionEntry>
+    </functions>
+</debugInfo>

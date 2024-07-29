@@ -1,0 +1,178 @@
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 1; ]
+import Toybox.Activity;
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 2; ]
+import Toybox.Lang;
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 3; ]
+import Toybox.Time;
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 4; ]
+import Toybox.WatchUi;
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 6; ]
+class hydration_data_fieldView extends WatchUi.SimpleDataField{
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 6; ]
+    <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" 14 16 ]
+        %tmp.2 = getv ? :drink_report;
+        putv self :_display_state %tmp.2;
+    }
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 6; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 7; @position = 18; ]
+    private
+    const FEEDING_INTERVAL = 15;
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 8; @position = 18; ]
+    private
+    const DRINKING_INTERVAL = 15;
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 9; @position = 18; ]
+    private
+    const ALERT_DISPLAY_TIME = 60;
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 10; @position = 18; ]
+    private
+    const ACTION_REPORT_DISPLAY_TIME = 30;
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 11; @position = 18; ]
+    private
+    const BOTTLE_PORTION_DENOMINATOR = 10;
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 12; @position = 18; ]
+    private
+    const MILLISECONDS_TO_SECONDS = 0.001;
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 14; @position = 16; ]
+    private
+    var _display_state;
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 16; ]
+    static
+    enum state {
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 17; @position = 8; ]
+        drink_report,
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 18; @position = 8; ]
+        eat_report,
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 19; @position = 8; ]
+        drink_alert,
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 20; @position = 8; ]
+        eat_alert
+    }
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 24; ]
+    function initialize() as Void {
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_24_26_27_4_start:
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" 25 8 ]
+        %tmp.2 = getv ? :SimpleDataField;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" 26 8 ]
+        %tmp.4 = "My Label";
+        putv self :label %tmp.4;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_24_26_27_4_stop:
+    }
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 33; ]
+    function compute(info as Activity.Info) as Numeric or Duration or String or Null {
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_33_85_40_4_start:
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" 35 8 ]
+        [ "_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_33_85_40_4_start" "_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_33_85_40_4_stop" ]
+        %timer_seconds.1 = local;
+        %tmp.1 = lgetv %info;
+        %tmp.2 = getv %tmp.1 :timerTime;
+        %tmp.4 = getv ? :MILLISECONDS_TO_SECONDS;
+        %tmp.5 = mul %tmp.2 %tmp.4;
+        %tmp.6 = getv function %tmp.5 :toNumber;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        lputv %timer_seconds.1 %tmp.7;
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" 36 8 ]
+        %tmp.9 = getv ? :System;
+        %tmp.10 = getv function %tmp.9 :println;
+        %tmp.11 = lgetv %info;
+        %tmp.12 = getv %tmp.11 :timerTime;
+        invoke %tmp.9 %tmp.10(%tmp.12);
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" 37 8 ]
+        %tmp.14 = getv ? :System;
+        %tmp.15 = getv function %tmp.14 :println;
+        %tmp.17 = lgetv %timer_seconds.1;
+        invoke %tmp.14 %tmp.15(%tmp.17);
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" 38 8 ]
+        %tmp.18 = self;
+        %tmp.19 = getv function %tmp.18 :determine_state;
+        %tmp.21 = lgetv %timer_seconds.1;
+        %tmp.22 = invoke %tmp.18 %tmp.19(%tmp.21);
+        putv self :_display_state %tmp.22;
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" 39 8 ]
+        %tmp.24 = getv ? :_display_state;
+        ret %tmp.24;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_33_85_40_4_stop:
+    }
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 42; ]
+    function determine_state(timer_sec) as state {
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_42_49_58_4_start:
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" 43 8 ]
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_43_8_46_8_if_stmt:
+        %tmp.2 = lgetv %timer_sec;
+        %tmp.3 = getm $.Toybox.Lang;
+        %tmp.4 = getv %tmp.3 :Number;
+        %tmp.5 = isa %tmp.2 %tmp.4;
+        %tmp.6 = not %tmp.5;
+        bf %tmp.6 @_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_43_8_46_8_if_end;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_43_8_46_8_if_true:
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_43_49_46_8_start:
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" 44 12 ]
+        %tmp.8 = getv ? :System;
+        %tmp.9 = getv function %tmp.8 :println;
+        %tmp.10 = "Expected number.";
+        invoke %tmp.8 %tmp.9(%tmp.10);
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" 45 12 ]
+        %tmp.12 = getv ? :_display_state;
+        ret %tmp.12;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_43_49_46_8_stop:
+        goto @_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_43_8_46_8_if_end;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_43_8_46_8_if_end:
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" 48 8 ]
+        [ "_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_42_49_58_4_start" "_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_42_49_58_4_stop" ]
+        %should_show_first_report.1 = local;
+        %tmp.14 = lgetv %timer_sec;
+        %tmp.16 = getv ? :ACTION_REPORT_DISPLAY_TIME;
+        %tmp.17 = div %tmp.14 %tmp.16;
+        %tmp.18 = 2;
+        %tmp.19 = mod %tmp.17 %tmp.18;
+        %tmp.20 = 0;
+        %tmp.21 = eq %tmp.19 %tmp.20;
+        lputv %should_show_first_report.1 %tmp.21;
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" 49 8 ]
+        %tmp.23 = getv ? :System;
+        %tmp.24 = getv function %tmp.23 :println;
+        %tmp.26 = lgetv %timer_sec;
+        invoke %tmp.23 %tmp.24(%tmp.26);
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" 50 8 ]
+        %tmp.28 = getv ? :System;
+        %tmp.29 = getv function %tmp.28 :println;
+        %tmp.31 = lgetv %timer_sec;
+        %tmp.33 = getv ? :ACTION_REPORT_DISPLAY_TIME;
+        %tmp.34 = div %tmp.31 %tmp.33;
+        %tmp.35 = 2;
+        %tmp.36 = mod %tmp.34 %tmp.35;
+        invoke %tmp.28 %tmp.29(%tmp.36);
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" 51 8 ]
+        %tmp.38 = getv ? :System;
+        %tmp.39 = getv function %tmp.38 :println;
+        %tmp.41 = lgetv %should_show_first_report.1;
+        invoke %tmp.38 %tmp.39(%tmp.41);
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" 53 8 ]
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_53_8_57_8_if_stmt:
+        %tmp.43 = lgetv %should_show_first_report.1;
+        bf %tmp.43 @_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_53_8_57_8_if_false;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_53_8_57_8_if_true:
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_53_38_55_8_start:
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" 54 12 ]
+        %tmp.45 = getv ? :drink_report;
+        ret %tmp.45;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_53_38_55_8_stop:
+        goto @_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_53_8_57_8_if_end;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_53_8_57_8_if_false:
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_55_15_57_8_start:
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc" 56 12 ]
+        %tmp.47 = getv ? :eat_report;
+        ret %tmp.47;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_55_15_57_8_stop:
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_53_8_57_8_if_end:
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_hydration_data_field_source_hydration_data_fieldView_mc_42_49_58_4_stop:
+    }
+}
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/hydration-data-field/source/hydration-data-fieldView.mc"; @line = 1; ]
+<init> {
+}
