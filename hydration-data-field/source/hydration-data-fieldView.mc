@@ -12,6 +12,8 @@ class hydration_data_fieldView extends WatchUi.SimpleDataField {
     private const MILLISECONDS_TO_SECONDS = 0.001;
 
     private var _display_state = drink_report;
+    private var _amount_of_bottle_remaining = 100; // %
+    private var _amount_of_times_eaten = 0;
 
     enum state {
         drink_report,
@@ -23,7 +25,7 @@ class hydration_data_fieldView extends WatchUi.SimpleDataField {
     // Set the label of the data field here.
     function initialize() {
         SimpleDataField.initialize();
-        label = "My Label";
+        set_label();
     }
 
     // The given info object contains all the current workout
@@ -35,6 +37,8 @@ class hydration_data_fieldView extends WatchUi.SimpleDataField {
         var timer_seconds = (info.timerTime * MILLISECONDS_TO_SECONDS).toNumber();
 
         _display_state = determine_state(timer_seconds);
+        set_label();
+
         return _display_state;
     }
 
@@ -51,4 +55,21 @@ class hydration_data_fieldView extends WatchUi.SimpleDataField {
             return eat_report;
         }
     }
+
+    function set_label() {
+        switch (_display_state) {
+            case drink_report:
+                label = "Bottle Remaining";
+                System.println("drink screen");
+                break;
+            case eat_report:
+                label = "Times Eaten";
+                System.println("eat screen");
+                break;
+            default:
+                System.println("unknown screen");
+                break;
+        }
+    }
+
 }
