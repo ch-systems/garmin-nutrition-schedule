@@ -1,0 +1,211 @@
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 1; ]
+import Toybox.Activity;
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 2; ]
+import Toybox.Graphics;
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 3; ]
+import Toybox.Lang;
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 4; ]
+import Toybox.Time;
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 5; ]
+import Toybox.WatchUi;
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 8; ]
+class DataFieldAlertView extends WatchUi.DataFieldAlert{
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 8; ]
+    <init> {
+    }
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 8; ]
+    static
+    <init> {
+    }
+    //! Constructor
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 11; ]
+    public
+    function initialize() as Void {
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_11_33_13_4_start:
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc" 12 8 ]
+        %tmp.2 = getv ? :DataFieldAlert;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_11_33_13_4_stop:
+    }
+    //! Update the view
+    //! @param dc Device context
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 17; ]
+    public
+    function onUpdate(dc as Dc) as Void {
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_17_47_23_4_start:
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc" 18 8 ]
+        %tmp.1 = lgetv %dc;
+        %tmp.2 = getv function %tmp.1 :setColor;
+        %tmp.3 = getm $.Toybox.Graphics;
+        %tmp.4 = getv %tmp.3 :COLOR_BLACK;
+        %tmp.5 = getm $.Toybox.Graphics;
+        %tmp.6 = getv %tmp.5 :COLOR_BLACK;
+        invoke %tmp.1 %tmp.2(%tmp.4, %tmp.6);
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc" 19 8 ]
+        %tmp.7 = lgetv %dc;
+        %tmp.8 = getv function %tmp.7 :clear;
+        invoke %tmp.7 %tmp.8();
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc" 20 8 ]
+        %tmp.9 = lgetv %dc;
+        %tmp.10 = getv function %tmp.9 :setColor;
+        %tmp.11 = getm $.Toybox.Graphics;
+        %tmp.12 = getv %tmp.11 :COLOR_WHITE;
+        %tmp.13 = getm $.Toybox.Graphics;
+        %tmp.14 = getv %tmp.13 :COLOR_TRANSPARENT;
+        invoke %tmp.9 %tmp.10(%tmp.12, %tmp.14);
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc" 22 8 ]
+        %tmp.15 = lgetv %dc;
+        %tmp.16 = getv function %tmp.15 :drawText;
+        %tmp.17 = lgetv %dc;
+        %tmp.18 = getv function %tmp.17 :getWidth;
+        %tmp.19 = invoke %tmp.17 %tmp.18();
+        %tmp.20 = 2;
+        %tmp.21 = div %tmp.19 %tmp.20;
+        %tmp.22 = lgetv %dc;
+        %tmp.23 = getv function %tmp.22 :getHeight;
+        %tmp.24 = invoke %tmp.22 %tmp.23();
+        %tmp.25 = 2;
+        %tmp.26 = div %tmp.24 %tmp.25;
+        %tmp.27 = 30;
+        %tmp.28 = sub %tmp.26 %tmp.27;
+        %tmp.29 = getm $.Toybox.Graphics;
+        %tmp.30 = getv %tmp.29 :FONT_SMALL;
+        %tmp.31 = "Alert: 10 sec elapsed";
+        %tmp.32 = getm $.Toybox.Graphics;
+        %tmp.33 = getv %tmp.32 :TEXT_JUSTIFY_CENTER;
+        invoke %tmp.15 %tmp.16(%tmp.21, %tmp.28, %tmp.30, %tmp.31, %tmp.33);
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_17_47_23_4_stop:
+    }
+}
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 26; ]
+class refuel_data_fieldView extends WatchUi.SimpleDataField{
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 26; ]
+    <init> {
+    }
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 26; ]
+    static
+    <init> {
+    }
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 27; @position = 18; ]
+    private
+    const FUELING_INTERVAL = 0.5;
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 28; @position = 18; ]
+    private
+    const ALERT_DISPLAY_TIME = 60;
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 29; @position = 18; ]
+    private
+    const MILLISECONDS_TO_SECONDS = 0.001;
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 30; @position = 18; ]
+    private
+    const MINUTES_TO_SECONDS = 60;
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 31; @position = 18; ]
+    private
+    const START_FEED_COUNT_FROM_1 = true;
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 33; @position = 16; ]
+    private
+    var _alertDisplayed = false;
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 36; ]
+    function initialize() as Void {
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_36_26_39_4_start:
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc" 37 8 ]
+        %tmp.2 = getv ? :SimpleDataField;
+        %tmp.3 = getv function %tmp.2 :initialize;
+        invoke %tmp.2 %tmp.3();
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc" 38 8 ]
+        %tmp.4 = "Times Fueled";
+        putv self :label %tmp.4;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_36_26_39_4_stop:
+    }
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 45; ]
+    function compute(info as Activity.Info) as Numeric or Duration or String or Null {
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_45_85_62_4_start:
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc" 47 8 ]
+        [ "_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_45_85_62_4_start" "_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_45_85_62_4_stop" ]
+        %timer_seconds.1 = local;
+        %tmp.1 = lgetv %info;
+        %tmp.2 = getv %tmp.1 :timerTime;
+        %tmp.4 = getv ? :MILLISECONDS_TO_SECONDS;
+        %tmp.5 = mul %tmp.2 %tmp.4;
+        %tmp.6 = getv function %tmp.5 :toNumber;
+        %tmp.7 = invoke %tmp.5 %tmp.6();
+        lputv %timer_seconds.1 %tmp.7;
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc" 49 8 ]
+        [ "_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_45_85_62_4_start" "_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_45_85_62_4_stop" ]
+        %amount_of_times_eaten.2 = local;
+        %tmp.9 = lgetv %timer_seconds.1;
+        %tmp.11 = getv ? :FUELING_INTERVAL;
+        %tmp.13 = getv ? :MINUTES_TO_SECONDS;
+        %tmp.14 = mul %tmp.11 %tmp.13;
+        %tmp.15 = div %tmp.9 %tmp.14;
+        %tmp.16 = getv function %tmp.15 :toNumber;
+        %tmp.17 = invoke %tmp.15 %tmp.16();
+        lputv %amount_of_times_eaten.2 %tmp.17;
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc" 50 8 ]
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_50_8_52_8_if_stmt:
+        %tmp.19 = getv ? :START_FEED_COUNT_FROM_1;
+        bf %tmp.19 @_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_50_8_52_8_if_end;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_50_8_52_8_if_true:
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_50_37_52_8_start:
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc" 51 12 ]
+        %tmp.20 = lgetv %amount_of_times_eaten.2;
+        %tmp.21 = 1;
+        %tmp.22 = add %tmp.20 %tmp.21;
+        lputv %amount_of_times_eaten.2 %tmp.22;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_50_37_52_8_stop:
+        goto @_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_50_8_52_8_if_end;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_50_8_52_8_if_end:
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc" 54 8 ]
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_54_8_59_8_if_stmt:
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_54_12_55_16_begin:
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_54_12_54_68_begin:
+        %tmp.23 = getm $.Toybox.WatchUi;
+        %tmp.24 = getv %tmp.23 :DataField;
+        %tmp.26 = const :showAlert;
+        %tmp.27 = canhazplz %tmp.24 %tmp.26;
+        bf %tmp.27 @_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_54_8_59_8_if_end;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_54_50_54_68_true:
+        %tmp.29 = lgetv %timer_seconds.1;
+        %tmp.30 = 1;
+        %tmp.31 = gt %tmp.29 %tmp.30;
+        push %tmp.31;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_54_50_54_68_end:
+        %tmp.32 = phi [%tmp.27 @_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_54_12_54_68_begin] [%tmp.31 @_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_54_50_54_68_true] [%tmp.32 @_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_54_50_54_68_end];
+        bf %tmp.32 @_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_54_8_59_8_if_end;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_55_15_55_16_true:
+        %tmp.34 = getv ? :_alertDisplayed;
+        %tmp.35 = not %tmp.34;
+        push %tmp.35;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_55_15_55_16_end:
+        %tmp.36 = phi [%tmp.32 @_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_54_12_55_16_begin] [%tmp.35 @_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_55_15_55_16_true] [%tmp.36 @_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_55_15_55_16_end];
+        bf %tmp.36 @_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_54_8_59_8_if_end;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_54_8_59_8_if_true:
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_55_33_59_8_start:
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc" 56 12 ]
+        %tmp.38 = getv ? :System;
+        %tmp.39 = getv function %tmp.38 :println;
+        %tmp.40 = "should show alert";
+        invoke %tmp.38 %tmp.39(%tmp.40);
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc" 57 12 ]
+        %tmp.41 = getm $.Toybox.WatchUi;
+        %tmp.42 = getv %tmp.41 :DataField;
+        %tmp.43 = getv function %tmp.42 :showAlert;
+        %tmp.47 = getm $;
+        %tmp.48 = getv %tmp.47 :DataFieldAlertView;
+        %tmp.44 = newc %tmp.48 ();
+        invoke %tmp.42 %tmp.43(%tmp.44);
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc" 58 12 ]
+        %tmp.49 = true;
+        putv self :_alertDisplayed %tmp.49;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_55_33_59_8_stop:
+        goto @_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_54_8_59_8_if_end;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_54_8_59_8_if_end:
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc" 61 8 ]
+        %tmp.51 = lgetv %amount_of_times_eaten.2;
+        ret %tmp.51;
+_Users_iancash_Documents_Personal_Projects_garmin_projects_garmin_nutrition_schedule_refuel_data_field_source_refuel_data_fieldView_mc_45_85_62_4_stop:
+    }
+}
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/refuel-data-fieldView.mc"; @line = 1; ]
+<init> {
+}

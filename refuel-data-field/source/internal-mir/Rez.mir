@@ -1,0 +1,1422 @@
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 1; ]
+import Toybox.Lang;
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 2; ]
+using Toybox.WatchUi;
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 3; ]
+using Toybox.WatchUi as :Ui;
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 4; ]
+using Toybox.Graphics;
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 5; ]
+using Toybox.Graphics as :Gfx;
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 7; ]
+module Rez {
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 7; ]
+    <init> {
+    }
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 8; ]
+    module Drawables {
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 8; ]
+        <init> {
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 9; @position = 27; initialized = true; ]
+        var LauncherIcon as ResourceId;
+    }
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 12; ]
+    module Strings {
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 12; ]
+        <init> {
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 13; @position = 27; initialized = true; ]
+        var AppName as ResourceId;
+    }
+    [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 16; ]
+    module Styles {
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 16; ]
+        <init> {
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 17; ]
+        module prompt_font_enhanced_readability__body_with_title {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 17; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 18; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 21; ]
+        module system_size__menu_header {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 21; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 22; @position = 18; ]
+            const height as Number = 0;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 25; ]
+        module system_loc__hint_button_left_bottom {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 25; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 26; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 29; ]
+        module prompt_font_enhanced_readability__body_no_title {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 29; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 30; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 33; ]
+        module prompt_loc__body_no_title {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 33; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 34; @position = 18; ]
+            const x as Number = 8;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 35; @position = 18; ]
+            const y as Number = 14;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 38; ]
+        module system_icon_dark__about {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 38; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 39; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_dark__about.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 40; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 41; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 42; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 45; ]
+        module system_icon_light__question {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 45; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 46; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_light__question.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 47; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 48; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 49; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 52; ]
+        module system_loc__hint_button_left_top {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 52; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 53; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 56; ]
+        module prompt_font__title {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 56; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 57; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 60; ]
+        module system_icon_dark__discard {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 60; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 61; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_dark__discard.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 62; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 63; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 64; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 67; ]
+        module system_size__menu_item {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 67; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 68; @position = 18; ]
+            const width as Number = 246;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 69; @position = 18; ]
+            const height as Number = 70;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 72; ]
+        module system_color_dark__text {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 72; ]
+            <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 74 18 ]
+                %tmp.1 = getm $.Toybox.Graphics;
+                %tmp.2 = getv %tmp.1 :COLOR_TRANSPARENT;
+                putv self :background %tmp.2;
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 73; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 74; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 77; ]
+        module system_icon_destructive__discard {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 77; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 78; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_destructive__discard.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 79; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 80; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 81; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 84; ]
+        module system_icon_dark__hint_action_menu {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 84; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 85; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 88; ]
+        module prompt_size__title {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 88; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 89; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 92; ]
+        module confirmation_font__body {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 92; ]
+            <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 93 18 ]
+                %tmp.3 = getm $.Toybox.Graphics;
+                %tmp.4 = getv %tmp.3 :TEXT_JUSTIFY_CENTER;
+                %tmp.5 = getm $.Toybox.Graphics;
+                %tmp.6 = getv %tmp.5 :TEXT_JUSTIFY_VCENTER;
+                %tmp.7 = bitor %tmp.4 %tmp.6;
+                putv self :justification %tmp.7;
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 94 18 ]
+                %tmp.8 = getm $.Toybox.Graphics;
+                %tmp.9 = getv %tmp.8 :FONT_MEDIUM;
+                putv self :font %tmp.9;
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 93; @position = 18; ]
+            const justification;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 94; @position = 18; ]
+            const font;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 97; ]
+        module system_color_dark__background {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 97; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 98; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 99; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 102; ]
+        module system_icon_destructive__hint_button_left_top {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 102; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 103; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 106; ]
+        module system_size__launch_icon {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 106; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 107; @position = 18; ]
+            const scaleX as Number = 35;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 108; @position = 18; ]
+            const scaleY as Number = 35;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 109; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 112; ]
+        module confirmation_input__confirm {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 112; ]
+            <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 113 18 ]
+                %tmp.10 = getm $.Toybox.WatchUi;
+                %tmp.11 = getv %tmp.10 :KEY_ENTER;
+                putv self :button %tmp.11;
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 113; @position = 18; ]
+            const button;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 116; ]
+        module prompt_font__body_with_title {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 116; ]
+            <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 117 18 ]
+                %tmp.12 = getm $.Toybox.Graphics;
+                %tmp.13 = getv %tmp.12 :TEXT_JUSTIFY_CENTER;
+                %tmp.14 = getm $.Toybox.Graphics;
+                %tmp.15 = getv %tmp.14 :TEXT_JUSTIFY_VCENTER;
+                %tmp.16 = bitor %tmp.13 %tmp.15;
+                putv self :justification %tmp.16;
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 118 18 ]
+                %tmp.17 = getm $.Toybox.Graphics;
+                %tmp.18 = getv %tmp.17 :FONT_MEDIUM;
+                putv self :font %tmp.18;
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 117; @position = 18; ]
+            const justification;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 118; @position = 18; ]
+            const font;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 121; ]
+        module confirmation_loc__body {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 121; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 122; @position = 18; ]
+            const x as Number = 1;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 123; @position = 18; ]
+            const y as Number = 23;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 126; ]
+        module system_icon_destructive__hint_button_left_bottom {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 126; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 127; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 130; ]
+        module prompt_color_dark__background {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 130; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 131; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 132; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 135; ]
+        module system_icon_destructive__hint_action_menu {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 135; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 136; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 139; ]
+        module system_loc__hint_action_menu {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 139; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 140; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 143; ]
+        module confirmation_icon__hint_confirm {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 143; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 144; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 145; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 146; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 147; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 150; ]
+        module system_loc__hint_button_left_middle {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 150; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 151; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 154; ]
+        module prompt_size__body_no_title {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 154; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 155; @position = 18; ]
+            const width as Number = 230;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 156; @position = 18; ]
+            const height as Number = 225;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 159; ]
+        module system_icon_light__hint_button_left_top {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 159; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 160; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 163; ]
+        module prompt_color_light__background {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 163; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 164; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 165; @position = 18; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 168; ]
+        module confirmation_input__delete {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 168; ]
+            <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 169 18 ]
+                %tmp.19 = getm $.Toybox.WatchUi;
+                %tmp.20 = getv %tmp.19 :KEY_ESC;
+                putv self :button %tmp.20;
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 169; @position = 18; ]
+            const button;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 172; ]
+        module system_icon_dark__hint_button_left_top {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 172; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 173; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 176; ]
+        module system_input__action_menu {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 176; ]
+            <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 177 18 ]
+                %tmp.21 = getm $.Toybox.WatchUi;
+                %tmp.22 = getv %tmp.21 :KEY_MENU;
+                putv self :button %tmp.22;
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 177; @position = 18; ]
+            const button;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 180; ]
+        module system_icon_light__save {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 180; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 181; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_light__save.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 182; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 183; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 184; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 187; ]
+        module prompt_color_light__body {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 187; ]
+            <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 189 18 ]
+                %tmp.23 = getm $.Toybox.Graphics;
+                %tmp.24 = getv %tmp.23 :COLOR_TRANSPARENT;
+                putv self :background %tmp.24;
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 188; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 189; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 192; ]
+        module system_loc__subwindow {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 192; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 193; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 196; ]
+        module system_icon_light__warning {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 196; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 197; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_light__warning.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 198; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 199; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 200; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 203; ]
+        module confirmation_color_light__body {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 203; ]
+            <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 205 18 ]
+                %tmp.25 = getm $.Toybox.Graphics;
+                %tmp.26 = getv %tmp.25 :COLOR_TRANSPARENT;
+                putv self :background %tmp.26;
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 204; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 205; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 208; ]
+        module confirmation_icon_light__hint_keep {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 208; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 209; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 210; @position = 18; ]
+            const disableTransparency as Boolean = false;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 211; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 212; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 215; ]
+        module activity_color_light__background {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 215; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 216; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 217; @position = 18; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 220; ]
+        module system_icon_positive__hint_button_right_top {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 220; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 221; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 224; ]
+        module system_size__screen {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 224; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 225; @position = 18; ]
+            const width as Number = 246;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 226; @position = 18; ]
+            const height as Number = 322;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 229; ]
+        module system_icon_destructive__hint_button_right_bottom {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 229; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 230; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 233; ]
+        module system_color_light__background {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 233; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 234; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 235; @position = 18; ]
+            const background as Number = 0xFFFFFF;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 238; ]
+        module system_icon_destructive__hint_button_right_top {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 238; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 239; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 242; ]
+        module confirmation_loc__hint_confirm {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 242; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 243; @position = 18; ]
+            const x as Number = 195;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 244; @position = 18; ]
+            const y as Number = 30;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 245; @position = 18; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 246; @position = 18; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 249; ]
+        module activity_color_dark__text {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 249; ]
+            <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 251 18 ]
+                %tmp.27 = getm $.Toybox.Graphics;
+                %tmp.28 = getv %tmp.27 :COLOR_TRANSPARENT;
+                putv self :background %tmp.28;
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 250; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 251; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 254; ]
+        module confirmation_input__keep {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 254; ]
+            <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 255 18 ]
+                %tmp.29 = getm $.Toybox.WatchUi;
+                %tmp.30 = getv %tmp.29 :KEY_ENTER;
+                putv self :button %tmp.30;
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 255; @position = 18; ]
+            const button;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 258; ]
+        module prompt_loc__body_with_title {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 258; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 259; @position = 18; ]
+            const x as Number = 8;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 260; @position = 18; ]
+            const y as Number = 93;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 263; ]
+        module system_icon_dark__search {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 263; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 264; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_dark__search.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 265; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 266; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 267; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 270; ]
+        module activity_color_light__text {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 270; ]
+            <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 272 18 ]
+                %tmp.31 = getm $.Toybox.Graphics;
+                %tmp.32 = getv %tmp.31 :COLOR_TRANSPARENT;
+                putv self :background %tmp.32;
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 271; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 272; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 275; ]
+        module confirmation_icon__hint_keep {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 275; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 276; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 277; @position = 18; ]
+            const disableTransparency as Boolean = false;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 278; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 279; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 282; ]
+        module system_icon_dark__save {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 282; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 283; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_dark__save.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 284; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 285; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 286; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 289; ]
+        module system_icon_destructive__hint_button_left_middle {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 289; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 290; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 293; ]
+        module system_icon_light__search {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 293; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 294; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_light__search.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 295; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 296; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 297; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 300; ]
+        module system_icon_dark__hint_button_left_bottom {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 300; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 301; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 304; ]
+        module system_icon_positive__hint_button_left_top {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 304; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 305; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 308; ]
+        module system_loc__hint_button_right_bottom {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 308; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 309; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 312; ]
+        module confirmation_icon_dark__hint_reject {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 312; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 313; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/confirmation_icon__hint_x.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 314; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 315; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 316; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 319; ]
+        module confirmation_color_dark__body {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 319; ]
+            <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 321 18 ]
+                %tmp.33 = getm $.Toybox.Graphics;
+                %tmp.34 = getv %tmp.33 :COLOR_TRANSPARENT;
+                putv self :background %tmp.34;
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 320; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 321; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 324; ]
+        module confirmation_icon_light__hint_confirm {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 324; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 325; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 326; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 327; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 328; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 331; ]
+        module prompt_color_dark__title {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 331; ]
+            <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 333 18 ]
+                %tmp.35 = getm $.Toybox.Graphics;
+                %tmp.36 = getv %tmp.35 :COLOR_TRANSPARENT;
+                putv self :background %tmp.36;
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 332; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 333; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 336; ]
+        module system_icon_destructive__cancel {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 336; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 337; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_destructive__cancel.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 338; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 339; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 340; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 343; ]
+        module system_icon_light__hint_button_right_bottom {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 343; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 344; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 347; ]
+        module prompt_loc__title {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 347; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 348; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 351; ]
+        module confirmation_font_enhanced_readability__body {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 351; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 352; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 355; ]
+        module prompt_color_light__title {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 355; ]
+            <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 357 18 ]
+                %tmp.37 = getm $.Toybox.Graphics;
+                %tmp.38 = getv %tmp.37 :COLOR_TRANSPARENT;
+                putv self :background %tmp.38;
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 356; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 357; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 360; ]
+        module system_icon_dark__hint_button_right_top {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 360; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 361; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 364; ]
+        module system_icon_dark__hint_button_left_middle {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 364; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 365; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 368; ]
+        module confirmation_icon_dark__hint_keep {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 368; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 369; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 370; @position = 18; ]
+            const disableTransparency as Boolean = false;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 371; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 372; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 375; ]
+        module system_icon_light__cancel {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 375; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 376; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_light__cancel.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 377; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 378; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 379; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 382; ]
+        module confirmation_icon_light__hint_reject {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 382; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 383; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/confirmation_icon__hint_x.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 384; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 385; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 386; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 389; ]
+        module system_icon_light__about {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 389; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 390; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_light__about.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 391; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 392; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 393; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 396; ]
+        module system_size__toast_icon {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 396; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 397; @position = 18; ]
+            const scaleX as Number = 32;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 398; @position = 18; ]
+            const scaleY as Number = 32;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 399; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 402; ]
+        module system_icon_dark__hint_button_right_middle {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 402; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 403; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 406; ]
+        module confirmation_icon__hint_reject {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 406; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 407; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/confirmation_icon__hint_x.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 408; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 409; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 410; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 413; ]
+        module system_icon_light__hint_action_menu {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 413; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 414; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 417; ]
+        module system_icon_light__hint_button_right_middle {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 417; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 418; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 421; ]
+        module system_icon_destructive__hint_button_right_middle {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 421; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 422; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 425; ]
+        module confirmation_loc__hint_reject {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 425; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 426; @position = 18; ]
+            const x as Number = 214;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 427; @position = 18; ]
+            const y as Number = 249;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 428; @position = 18; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 429; @position = 18; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 432; ]
+        module confirmation_icon_dark__hint_delete {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 432; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 433; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/confirmation_icon__hint_back.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 434; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 435; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 436; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 439; ]
+        module activity_color_dark__background {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 439; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 440; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 441; @position = 18; ]
+            const background as Number = 0x000000;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 444; ]
+        module system_icon_light__hint_button_left_bottom {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 444; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 445; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 448; ]
+        module system_icon_positive__hint_button_left_middle {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 448; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 449; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 452; ]
+        module system_size__menu_icon {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 452; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 453; @position = 18; ]
+            const scaleX as Number = 40;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 454; @position = 18; ]
+            const scaleY as Number = 40;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 455; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 458; ]
+        module system_icon_destructive__warning {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 458; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 459; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_destructive__warning.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 460; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 461; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 462; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 465; ]
+        module system_loc__hint_button_right_middle {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 465; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 466; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 469; ]
+        module system_icon_dark__cancel {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 469; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 470; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_dark__cancel.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 471; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 472; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 473; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 476; ]
+        module prompt_size__body_with_title {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 476; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 477; @position = 18; ]
+            const width as Number = 230;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 478; @position = 18; ]
+            const height as Number = 135;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 481; ]
+        module system_loc__hint_button_right_top {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 481; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 482; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 485; ]
+        module system_color_light__text {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 485; ]
+            <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 487 18 ]
+                %tmp.39 = getm $.Toybox.Graphics;
+                %tmp.40 = getv %tmp.39 :COLOR_TRANSPARENT;
+                putv self :background %tmp.40;
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 486; @position = 18; ]
+            const color as Number = 0x000000;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 487; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 490; ]
+        module system_icon_light__check {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 490; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 491; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_light__check.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 492; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 493; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 494; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 497; ]
+        module confirmation_input__reject {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 497; ]
+            <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 498 18 ]
+                %tmp.41 = getm $.Toybox.WatchUi;
+                %tmp.42 = getv %tmp.41 :KEY_ESC;
+                putv self :button %tmp.42;
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 498; @position = 18; ]
+            const button;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 501; ]
+        module system_icon_light__revert {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 501; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 502; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_light__revert.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 503; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 504; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 505; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 508; ]
+        module system_size__subwindow {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 508; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 509; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 512; ]
+        module system_icon_positive__hint_button_left_bottom {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 512; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 513; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 516; ]
+        module system_icon_dark__check {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 516; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 517; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_dark__check.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 518; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 519; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 520; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 523; ]
+        module confirmation_loc__hint_keep {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 523; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 524; @position = 18; ]
+            const x as Number = 195;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 525; @position = 18; ]
+            const y as Number = 30;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 526; @position = 18; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 527; @position = 18; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 530; ]
+        module confirmation_loc__hint_delete {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 530; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 531; @position = 18; ]
+            const x as Number = 195;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 532; @position = 18; ]
+            const y as Number = 249;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 533; @position = 18; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 534; @position = 18; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 537; ]
+        module system_icon_positive__hint_action_menu {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 537; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 538; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 541; ]
+        module system_icon_positive__hint_button_right_middle {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 541; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 542; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 545; ]
+        module system_icon_light__hint_button_left_middle {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 545; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 546; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 549; ]
+        module system_icon_dark__hint_button_right_bottom {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 549; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 550; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 553; ]
+        module system_icon_positive__hint_button_right_bottom {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 553; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 554; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 557; ]
+        module system_icon_dark__revert {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 557; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 558; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_dark__revert.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 559; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 560; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 561; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 564; ]
+        module confirmation_icon_light__hint_delete {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 564; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 565; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/confirmation_icon__hint_back.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 566; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 567; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 568; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 571; ]
+        module system_icon_dark__question {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 571; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 572; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_dark__question.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 573; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 574; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 575; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 578; ]
+        module system_icon_light__discard {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 578; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 579; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_light__discard.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 580; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 581; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 582; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 585; ]
+        module device_info {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 585; ]
+            <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 587 18 ]
+                %tmp.43 = getm $.Toybox.System;
+                %tmp.44 = getv %tmp.43 :SCREEN_SHAPE_RECTANGLE;
+                putv self :screenShape %tmp.44;
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 586; @position = 18; ]
+            const screenWidth as Number = 246;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 587; @position = 18; ]
+            const screenShape;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 588; @position = 18; ]
+            const hasNightMode as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 589; @position = 18; ]
+            const hasGpu as Boolean = false;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 590; @position = 18; ]
+            const screenHeight as Number = 322;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 591; @position = 18; ]
+            const hasTouchScreen as Boolean = false;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 592; @position = 18; ]
+            const hasEnhancedReadabilityMode as Boolean = false;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 595; ]
+        module confirmation_icon_dark__hint_confirm {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 595; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 596; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/confirmation_icon__hint_completion.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 597; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 598; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 599; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 602; ]
+        module prompt_font__body_no_title {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 602; ]
+            <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 603 18 ]
+                %tmp.45 = getm $.Toybox.Graphics;
+                %tmp.46 = getv %tmp.45 :TEXT_JUSTIFY_CENTER;
+                %tmp.47 = getm $.Toybox.Graphics;
+                %tmp.48 = getv %tmp.47 :TEXT_JUSTIFY_VCENTER;
+                %tmp.49 = bitor %tmp.46 %tmp.48;
+                putv self :justification %tmp.49;
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 604 18 ]
+                %tmp.50 = getm $.Toybox.Graphics;
+                %tmp.51 = getv %tmp.50 :FONT_MEDIUM;
+                putv self :font %tmp.51;
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 603; @position = 18; ]
+            const justification;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 604; @position = 18; ]
+            const font;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 607; ]
+        module prompt_size__title_icon {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 607; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 608; @position = 18; ]
+            const scaleX as Number = 55;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 609; @position = 18; ]
+            const scaleY as Number = 55;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 610; @position = 18; ]
+            const scaleRelativeTo as String = "screen";
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 613; ]
+        module system_icon_dark__warning {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 613; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 614; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_dark__warning.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 615; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 616; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 617; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 620; ]
+        module prompt_loc__title_icon {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 620; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 621; @position = 18; ]
+            const x as Number = 123;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 622; @position = 18; ]
+            const y as Number = 44;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 623; @position = 18; ]
+            const horizontalJustification as String = "center";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 624; @position = 18; ]
+            const verticalJustification as String = "center";
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 627; ]
+        module prompt_font_enhanced_readability__title {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 627; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 628; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 631; ]
+        module prompt_color_dark__body {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 631; ]
+            <init> {
+[ "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen" 633 18 ]
+                %tmp.52 = getm $.Toybox.Graphics;
+                %tmp.53 = getv %tmp.52 :COLOR_TRANSPARENT;
+                putv self :background %tmp.53;
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 632; @position = 18; ]
+            const color as Number = 0xFFFFFF;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 633; @position = 18; ]
+            const background;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 636; ]
+        module confirmation_icon__hint_delete {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 636; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 637; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/confirmation_icon__hint_back.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 638; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 639; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 640; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 643; ]
+        module system_icon_light__hint_button_right_top {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 643; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 644; @position = 18; ]
+            const exclude as Boolean = true;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 647; ]
+        module confirmation_size__body {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 647; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 648; @position = 18; ]
+            const width as Number = 246;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 649; @position = 18; ]
+            const height as Number = 236;
+        }
+        [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 652; ]
+        module system_icon_positive__check {
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 652; ]
+            <init> {
+            }
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 653; @position = 18; ]
+            const filename as String = "/Users/iancash/Library/Application Support/Garmin/ConnectIQ/Devices/edge540/system_icon_positive__check.svg";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 654; @position = 18; ]
+            const disableTransparency as Boolean = true;
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 655; @position = 18; ]
+            const dithering as String = "none";
+            [ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 656; @position = 18; ]
+            const automaticPalette as Boolean = true;
+        }
+    }
+}
+[ @file = "/Users/iancash/Documents/Personal Projects/garmin-projects/garmin-nutrition-schedule/refuel-data-field/source/gen/006-B4061-00/source/Rez.mcgen"; @line = 1; ]
+<init> {
+}
