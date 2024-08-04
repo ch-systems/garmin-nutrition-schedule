@@ -3,10 +3,12 @@ import Toybox.Graphics;
 import Toybox.Lang;
 import Toybox.Time;
 import Toybox.WatchUi;
+import Toybox.System;
+
+var _alert_displayed as Boolean = false;
 
 //! The data field alert
 class DataFieldAlertView extends WatchUi.DataFieldAlert {
-
     //! Constructor
     public function initialize() {
         DataFieldAlert.initialize();
@@ -19,18 +21,29 @@ class DataFieldAlertView extends WatchUi.DataFieldAlert {
         dc.clear();
         dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
 
-        dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2 - 30, Graphics.FONT_SMALL, "Alert: 10 sec elapsed", Graphics.TEXT_JUSTIFY_CENTER);
+        dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2 - 30, Graphics.FONT_LARGE, "Time to Refuel!", Graphics.TEXT_JUSTIFY_CENTER);
+    }
+
+    public function onHide() {
+        System.println("should hide alert");
+        $._alert_displayed = false;
     }
 }
 
+// TODO: Have the cycle actually be a cycle. Ex. every x time add time eaten and show alert
+// TODO: Be able to dismiss alert and show another one in the future - done
+// TODO: Use ALERT_DISPLAY_DELAY
+// TODO: Settings page :)
+// TODO: Have everything reset after x amount of minutes paused/stopped
+// TODO: Repeat for water and just timer
+// TODO: RELEASE!
+
 class refuel_data_fieldView extends WatchUi.SimpleDataField {
     private const FUELING_INTERVAL = 0.5; // min
-    private const ALERT_DISPLAY_TIME = 60; // sec
+    // private const ALERT_DISPLAY_DELAY = 30; // sec - negative values will alert early
     private const MILLISECONDS_TO_SECONDS = 0.001;
     private const MINUTES_TO_SECONDS = 60;
     private const START_FEED_COUNT_FROM_1 = true;
-
-    private var _alertDisplayed = false;
 
     // Set the label of the data field here.
     function initialize() {
@@ -51,11 +64,11 @@ class refuel_data_fieldView extends WatchUi.SimpleDataField {
             amount_of_times_eaten += 1;
         }
 
-        if ((WatchUi.DataField has :showAlert) && (timer_seconds > 1)
-            && !_alertDisplayed) {
+        if ((WatchUi.DataField has :showAlert) and (timer_seconds > 1)
+            and !$._alert_displayed and !we_showed_the_alert_dummy) {
             System.println("should show alert");
             WatchUi.DataField.showAlert(new $.DataFieldAlertView());
-            _alertDisplayed = true;
+            $._alert_displayed = true;
         }
 
         return amount_of_times_eaten;
