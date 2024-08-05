@@ -69,8 +69,13 @@ class refuel_data_fieldView extends WatchUi.SimpleDataField {
 
             if ((WatchUi.DataField has :showAlert) and !$._alert_displayed) {
                 System.println("should show alert");
-                WatchUi.DataField.showAlert(new $.DataFieldAlertView());
-                $._alert_displayed = true;
+                try {
+                    WatchUi.DataField.showAlert(new $.DataFieldAlertView());
+                    $._alert_displayed = true;
+                } catch (e) {
+                    System.println(e);
+                }
+                
             }
         }
 
