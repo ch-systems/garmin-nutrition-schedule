@@ -39,10 +39,10 @@ class DataFieldAlertView extends WatchUi.DataFieldAlert {
 }
 
 class hydration_data_fieldView extends WatchUi.SimpleDataField {
-  private const FULL_BOTTLE_INTERVAL = 2; // min
-  private const DRINKING_INTERVAL = 1; // min
+  private const FULL_BOTTLE_INTERVAL = 60; // min
+  private const DRINKING_INTERVAL = 5; // min
   private const FULL_BOTTLE_AMOUNT = 1f; // .x%
-  private const RESET_DELAY = 1; // min of stopped time before full reset of data field
+  private const RESET_DELAY = 10; // min of stopped time before full reset of data field
 
   private const MILLISECONDS_TO_SECONDS = 0.001;
   private const MINUTES_TO_SECONDS = 60;

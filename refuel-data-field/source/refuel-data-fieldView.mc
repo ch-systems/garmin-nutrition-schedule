@@ -41,7 +41,7 @@ class DataFieldAlertView extends WatchUi.DataFieldAlert {
 // TODO: Have the cycle actually be a cycle. Ex. every x time add time eaten and show alert - done
 // TODO: Be able to dismiss alert and show another one in the future - done
 // TODO: Have everything reset after x amount of minutes paused/stopped - done
-// TODO: Repeat for water and just timer
+// TODO: Repeat for water and just timer - done
 // TODO: RELEASE!
 
 class refuel_data_fieldView extends WatchUi.SimpleDataField {
