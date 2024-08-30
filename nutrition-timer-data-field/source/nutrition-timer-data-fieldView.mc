@@ -26,28 +26,26 @@ class nutrition_timer_data_fieldView extends WatchUi.SimpleDataField {
     // See Activity.Info in the documentation for available information.
     var timer_seconds = (info.timerTime * MILLISECONDS_TO_SECONDS).toNumber();
 
-    // convert to hours, minutes and seconds "HH:MM:SS"
-    var seconds_in_hours = timer_seconds / SECONDS_IN_HOUR;
-    var whole_hours = seconds_in_hours.toString();
+    // determine hours, mins, seconds
+    var hours = timer_seconds / SECONDS_IN_HOUR;
+    var whole_hours = hours.toString();
     if (whole_hours.length() < 2) {
       whole_hours = "0" + whole_hours;
     }
 
-    timer_seconds = timer_seconds - seconds_in_hours * SECONDS_IN_HOUR;
-    var seconds_in_minutes = timer_seconds / SECONDS_IN_MINUTE;
-    var whole_minutes = seconds_in_minutes.toString();
+    timer_seconds = timer_seconds - hours * SECONDS_IN_HOUR;
+    var minutes = timer_seconds / SECONDS_IN_MINUTE;
+    var whole_minutes = minutes.toString();
     if (whole_minutes.length() < 2) {
       whole_minutes = "0" + whole_minutes;
     }
 
-    timer_seconds = (
-      timer_seconds -
-      seconds_in_minutes * SECONDS_IN_MINUTE
-    ).toString();
+    timer_seconds = (timer_seconds - minutes * SECONDS_IN_MINUTE).toString();
     if (timer_seconds.length() < 2) {
       timer_seconds = "0" + timer_seconds;
     }
 
+    // HH:mm:ss
     return whole_hours + ":" + whole_minutes + ":" + timer_seconds;
   }
 }
