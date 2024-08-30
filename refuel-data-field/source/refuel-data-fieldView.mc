@@ -38,12 +38,6 @@ class DataFieldAlertView extends WatchUi.DataFieldAlert {
   }
 }
 
-// TODO: Have the cycle actually be a cycle. Ex. every x time add time eaten and show alert - done
-// TODO: Be able to dismiss alert and show another one in the future - done
-// TODO: Have everything reset after x amount of minutes paused/stopped - done
-// TODO: Repeat for water and just timer - done
-// TODO: RELEASE!
-
 class refuel_data_fieldView extends WatchUi.SimpleDataField {
   private const FUELING_INTERVAL = 30; // min
   private const RESET_DELAY = 10; // min of stopped time before full reset of data field
@@ -56,7 +50,6 @@ class refuel_data_fieldView extends WatchUi.SimpleDataField {
   private var _timer_stopped_seconds = 0;
   private var _timer_offset_seconds = 0;
 
-  // Set the label of the data field here.
   function initialize() {
     SimpleDataField.initialize();
     label = "Times Fueled";
