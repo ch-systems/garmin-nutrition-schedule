@@ -33,12 +33,15 @@ class DataFieldAlertView extends WatchUi.DataFieldAlert {
 }
 
 class hydration_data_fieldView extends WatchUi.SimpleDataField {
-    private const FULL_BOTTLE_INTERVAL = 60; // min
-    private const DRINKING_INTERVAL = 15; // min
+    private const FULL_BOTTLE_INTERVAL = 2; // min
+    private const DRINKING_INTERVAL = 1; // min
+    private const FULL_BOTTLE_AMOUNT = 1f; // .x%
+    private const RESET_DELAY = 1; // min of stopped time before full reset of data field
+
     private const MILLISECONDS_TO_SECONDS = 0.001;
     private const MINUTES_TO_SECONDS = 60;
 
-    private var _amount_of_bottle_remaining = 100; // %
+    private var _amount_of_bottle_remaining = FULL_BOTTLE_AMOUNT; // .x%
     private var _times_calced = 0;
     private var _last_timer_seconds = 0;
     private var _timer_stopped_seconds = 0;
@@ -60,11 +63,11 @@ class hydration_data_fieldView extends WatchUi.SimpleDataField {
 
         var calced_times_refueled = ((timer_seconds - _timer_offset_seconds) / (DRINKING_INTERVAL * MINUTES_TO_SECONDS)).toNumber();
         if (_times_calced != calced_times_refueled) {
-            _times_calced = calced_times_refueled
+            _times_calced = calced_times_refueled;
 
-            // calc amount remaining here
-            var percent_per_interval = (DRINKING_INTERVAL / FULL_BOTTLE_INTERVAL) * 100; // 25
-            _amount_of_bottle_remaining -= percent_per_interval // 75
+            // calc amount remaining
+            var percent_per_interval = (DRINKING_INTERVAL.toFloat() / FULL_BOTTLE_INTERVAL.toFloat());
+            _amount_of_bottle_remaining -= percent_per_interval;
         }
 
         // Handle resetting after the activity has been stopped/paused for a length of time
@@ -76,7 +79,7 @@ class hydration_data_fieldView extends WatchUi.SimpleDataField {
             if (_timer_stopped_seconds >= (RESET_DELAY * MINUTES_TO_SECONDS)) {
                 _timer_offset_seconds = timer_seconds;
                 _timer_stopped_seconds = 0;
-                try_display_alert("Bottle Amount Reset\nAfter Long Stop");
+                try_display_alert("Bottle Reset\nAfter Long Stop");
             }
         } else if (_timer_stopped_seconds != 0) {
             _timer_stopped_seconds = 0;
@@ -84,9 +87,30 @@ class hydration_data_fieldView extends WatchUi.SimpleDataField {
         _last_timer_seconds = timer_seconds;
 
         // calc percent to bottle fraction
-        var fraction = float_to_fraction(_amount_of_bottle_remaining.toDouble(), 0.0001d);
+        var report = _amount_of_bottle_remaining;
+        if (_amount_of_bottle_remaining == FULL_BOTTLE_AMOUNT) {
+            report = "1";
+        } else {
+            report = float_to_fraction(_amount_of_bottle_remaining.toDouble(), 0.0001d);
+        }
+        if (report.equals("0/1")) {
+            _amount_of_bottle_remaining = FULL_BOTTLE_AMOUNT;
+            report = "1";
+            try_display_alert("Move to\nNext Bottle");
+        }
 
-        return fraction;
+        return report;
+    }
+
+    function try_display_alert(alert_text as String) {
+        if ((WatchUi.DataField has :showAlert) and !$._alert_displayed) {
+                try {
+                    WatchUi.DataField.showAlert(new $.DataFieldAlertView(alert_text));
+                    $._alert_displayed = true;
+                } catch (e) {
+                    System.println(e);
+                }
+            }
     }
 
     public function float_to_fraction(value as Double, accuracy as Double) as String {
