@@ -2,32 +2,52 @@ import Toybox.Activity;
 import Toybox.Lang;
 import Toybox.Time;
 import Toybox.WatchUi;
+import Toybox.Graphics;
+import Toybox.Test;
+
+var _alert_displayed as Boolean = false;
+
+//! The data field alert
+class DataFieldAlertView extends WatchUi.DataFieldAlert {
+    private var _alert_text = "";
+
+    //! Constructor
+    public function initialize(alert_text as String) {
+        _alert_text = alert_text;
+        DataFieldAlert.initialize();
+    }
+
+    //! Update the view
+    //! @param dc Device context
+    public function onUpdate(dc as Dc) as Void {
+        dc.setColor(Graphics.COLOR_BLACK, Graphics.COLOR_BLACK);
+        dc.clear();
+        dc.setColor(Graphics.COLOR_WHITE, Graphics.COLOR_TRANSPARENT);
+
+        dc.drawText(dc.getWidth() / 2, dc.getHeight() / 2 - 30, Graphics.FONT_LARGE, _alert_text, Graphics.TEXT_JUSTIFY_CENTER);
+    }
+
+    public function onHide() {
+        $._alert_displayed = false;
+    }
+}
 
 class hydration_data_fieldView extends WatchUi.SimpleDataField {
-    private const FEEDING_INTERVAL = 0.5; // min
+    private const FULL_BOTTLE_INTERVAL = 60; // min
     private const DRINKING_INTERVAL = 15; // min
-    private const ALERT_DISPLAY_TIME = 60; // sec
-    private const ACTION_REPORT_DISPLAY_TIME = 15; // sec
-    private const BOTTLE_PORTION_DENOMINATOR = 10;
     private const MILLISECONDS_TO_SECONDS = 0.001;
     private const MINUTES_TO_SECONDS = 60;
-    private const START_FEED_COUNT_FROM_1 = true;
 
-    private var _display_state = drink_report;
     private var _amount_of_bottle_remaining = 100; // %
-    // private var amount_of_times_eaten = 0;
-
-    enum state {
-        drink_report,
-        eat_report,
-        drink_alert,
-        eat_alert
-    }
+    private var _times_calced = 0;
+    private var _last_timer_seconds = 0;
+    private var _timer_stopped_seconds = 0;
+    private var _timer_offset_seconds = 0;
 
     // Set the label of the data field here.
     function initialize() {
         SimpleDataField.initialize();
-        label = "Eat Times / Drink Remaining"
+        label = "Bottle Remaining";
     }
 
     // The given info object contains all the current workout
@@ -37,65 +57,185 @@ class hydration_data_fieldView extends WatchUi.SimpleDataField {
     function compute(info as Activity.Info) as Numeric or Duration or String or Null {
         // See Activity.Info in the documentation for available information.
         var timer_seconds = (info.timerTime * MILLISECONDS_TO_SECONDS).toNumber();
-        _display_state = determine_state(timer_seconds);
 
-        return calc_data(timer_seconds);
-    }
+        var calced_times_refueled = ((timer_seconds - _timer_offset_seconds) / (DRINKING_INTERVAL * MINUTES_TO_SECONDS)).toNumber();
+        if (_times_calced != calced_times_refueled) {
+            _times_calced = calced_times_refueled
 
-    function determine_state(timer_sec) as state {
-        if (!(timer_sec instanceof Lang.Number)) {
-            System.println("Expected number.");
-            return _display_state;
+            // calc amount remaining here
+            var percent_per_interval = (DRINKING_INTERVAL / FULL_BOTTLE_INTERVAL) * 100; // 25
+            _amount_of_bottle_remaining -= percent_per_interval // 75
         }
 
-        var should_show_first_report = ((timer_sec / ACTION_REPORT_DISPLAY_TIME) % 2) == 0;
-        if (should_show_first_report) {
-            return drink_report;
-        } else {
-            return eat_report;
+        // Handle resetting after the activity has been stopped/paused for a length of time
+        // - could check info.TimerState and calculate time since the state changed
+        //   easier to just do a simple check and see if timer_seconds is static (stopped/paused)
+        //   and operate under the assumption that compute() is called every ~1s
+        if (timer_seconds == _last_timer_seconds) {
+            _timer_stopped_seconds += 1;
+            if (_timer_stopped_seconds >= (RESET_DELAY * MINUTES_TO_SECONDS)) {
+                _timer_offset_seconds = timer_seconds;
+                _timer_stopped_seconds = 0;
+                try_display_alert("Bottle Amount Reset\nAfter Long Stop");
+            }
+        } else if (_timer_stopped_seconds != 0) {
+            _timer_stopped_seconds = 0;
         }
+        _last_timer_seconds = timer_seconds;
+
+        // calc percent to bottle fraction
+        var fraction = float_to_fraction(_amount_of_bottle_remaining.toDouble(), 0.0001d);
+
+        return fraction;
     }
 
-    function set_label() {
-        switch (_display_state) {
-            case drink_report:
-                label = "Bottle Remaining";
-                System.println("drink screen");
+    public function float_to_fraction(value as Double, accuracy as Double) as String {
+        var sign = value < 0 ? -1 : 1;
+        value = value < 0 ? -value : value;
+        var integerpart = value.toNumber();
+        value -= integerpart;
+        var minimalvalue = value - accuracy;
+        if (minimalvalue < 0.0) {
+            var numerator = (sign * integerpart).toString();
+            return numerator + "/" + "1";
+        }
+        var maximumvalue = value + accuracy;
+        if (maximumvalue > 1.0) {
+            var numerator = (sign * (integerpart + 1)).toString();
+            return numerator + "/" + "1";
+        }
+        //int a = 0;
+        var b = 1;
+        //int c = 1;
+        var d = (1 / maximumvalue).toNumber();
+        var left_n = minimalvalue; // b * minimalvalue - a
+        var left_d = 1.0 - d * minimalvalue; // c - d * minimalvalue
+        var right_n = 1.0 - d * maximumvalue; // c - d * maximumvalue
+        var right_d = maximumvalue; // b * maximumvalue - a            
+        while (true)
+        {
+            if (left_n < left_d) {
                 break;
-            case eat_report:
-                label = "Times Eaten";
-                System.println("eat screen");
+            }
+            var n = (left_n / left_d).toNumber();
+            //a += n * c;
+            b += n * d;
+            left_n -= n * left_d;
+            right_d -= n * right_n;
+            if (right_n < right_d) {
                 break;
-            default:
-                label = "Error: Unknown State";
-                System.println("unknown screen");
-                break;
+            }
+            n = (right_n / right_d).toNumber();
+            //c += n * a;
+            d += n * b;
+            left_d -= n * left_n;
+            right_n -= n * right_d;
         }
+
+        var denominator = (b + d).toNumber();
+        var numerator = (value * denominator + 0.5).toNumber();
+        var final_numerator = (sign * (integerpart * denominator + numerator)).toString();
+        return final_numerator + "/" + denominator.toString();
     }
+}
 
-    function calc_data(timer_sec) as String {
-        if (!(timer_sec instanceof Lang.Number)) {
-            System.println("Expected number.");
-            return "Error: Missing number type for data calc";
-        }
+// Tests --- Use VSCode test explorer
 
-        switch (_display_state) {
-            case drink_report:
-                return "yeet";
-            case eat_report:
-                System.println("start calc");
-                System.println(timer_sec);
-                System.println(FEEDING_INTERVAL * MINUTES_TO_SECONDS);
-                System.println((timer_sec / (FEEDING_INTERVAL * MINUTES_TO_SECONDS)));
-                var amount_of_times_eaten = (timer_sec / (FEEDING_INTERVAL * MINUTES_TO_SECONDS)).toNumber();
-                System.println(amount_of_times_eaten);
-                if (START_FEED_COUNT_FROM_1) {
-                    amount_of_times_eaten += 1;
-                }
-                return amount_of_times_eaten.toString();
-            default:
-                return "--";
-        }
-    }
+(:test)
+function fraction_0(logger as Logger) as Boolean {
+    var dataField = new hydration_data_fieldView();
+    var DRINKING_INTERVAL = 20f; // min
+    var FULL_BOTTLE_INTERVAL = 60f; // min
+    var percent_per_interval = (DRINKING_INTERVAL / FULL_BOTTLE_INTERVAL);
+    var calced_fraction = dataField.float_to_fraction((1f - percent_per_interval).toDouble(), 0.001d);
+    logger.debug(calced_fraction);
+    return (calced_fraction.equals("2/3")); // returning true indicates pass, false indicates failure
+}
 
+(:test)
+function fraction_1(logger as Logger) as Boolean {
+    var dataField = new hydration_data_fieldView();
+    var DRINKING_INTERVAL = 60f; // min
+    var FULL_BOTTLE_INTERVAL = 60f; // min
+    var percent_per_interval = (DRINKING_INTERVAL / FULL_BOTTLE_INTERVAL);
+    var calced_fraction = dataField.float_to_fraction((1f - percent_per_interval).toDouble(), 0.001d);
+    logger.debug(calced_fraction);
+    return (calced_fraction.equals("0/1"));
+}
+
+(:test)
+function fraction_2(logger as Logger) as Boolean {
+    var dataField = new hydration_data_fieldView();
+    var DRINKING_INTERVAL = 15f; // min
+    var FULL_BOTTLE_INTERVAL = 60f; // min
+    var percent_per_interval = (DRINKING_INTERVAL / FULL_BOTTLE_INTERVAL);
+    var calced_fraction = dataField.float_to_fraction((1f - percent_per_interval).toDouble(), 0.001d);
+    logger.debug(calced_fraction);
+    return (calced_fraction.equals("3/4"));
+}
+
+(:test)
+function fraction_3(logger as Logger) as Boolean {
+    var dataField = new hydration_data_fieldView();
+    var DRINKING_INTERVAL = 30f; // min
+    var FULL_BOTTLE_INTERVAL = 60f; // min
+    var percent_per_interval = (DRINKING_INTERVAL / FULL_BOTTLE_INTERVAL);
+    var calced_fraction = dataField.float_to_fraction((1f - percent_per_interval).toDouble(), 0.001d);
+    logger.debug(calced_fraction);
+    return (calced_fraction.equals("1/2"));
+}
+
+(:test)
+function fraction_4(logger as Logger) as Boolean {
+    var dataField = new hydration_data_fieldView();
+    var DRINKING_INTERVAL = 6f; // min
+    var FULL_BOTTLE_INTERVAL = 60f; // min
+    var percent_per_interval = (DRINKING_INTERVAL / FULL_BOTTLE_INTERVAL);
+    var calced_fraction = dataField.float_to_fraction((1f - percent_per_interval).toDouble(), 0.001d);
+    logger.debug(calced_fraction);
+    return (calced_fraction.equals("9/10"));
+}
+
+(:test)
+function fraction_5(logger as Logger) as Boolean {
+    var dataField = new hydration_data_fieldView();
+    var DRINKING_INTERVAL = 12f; // min
+    var FULL_BOTTLE_INTERVAL = 60f; // min
+    var percent_per_interval = (DRINKING_INTERVAL / FULL_BOTTLE_INTERVAL);
+    var calced_fraction = dataField.float_to_fraction((1f - percent_per_interval * 2).toDouble(), 0.001d);
+    logger.debug(calced_fraction);
+    return (calced_fraction.equals("3/5"));
+}
+
+(:test)
+function fraction_6(logger as Logger) as Boolean {
+    var dataField = new hydration_data_fieldView();
+    var DRINKING_INTERVAL = 7.5f; // min
+    var FULL_BOTTLE_INTERVAL = 60f; // min
+    var percent_per_interval = (DRINKING_INTERVAL / FULL_BOTTLE_INTERVAL);
+    var calced_fraction = dataField.float_to_fraction((1f - percent_per_interval * 3).toDouble(), 0.001d);
+    logger.debug(calced_fraction);
+    return (calced_fraction.equals("5/8"));
+}
+
+(:test)
+function fraction_7(logger as Logger) as Boolean {
+    var dataField = new hydration_data_fieldView();
+    var DRINKING_INTERVAL = 10f; // min
+    var FULL_BOTTLE_INTERVAL = 60f; // min
+    var percent_per_interval = (DRINKING_INTERVAL / FULL_BOTTLE_INTERVAL);
+    var calced_fraction = dataField.float_to_fraction((1f - percent_per_interval * 5).toDouble(), 0.001d);
+    logger.debug(calced_fraction);
+    return (calced_fraction.equals("1/6"));
+}
+
+(:test)
+function fraction_8(logger as Logger) as Boolean {
+    var dataField = new hydration_data_fieldView();
+    var DRINKING_INTERVAL = 5f; // min
+    var FULL_BOTTLE_INTERVAL = 60f; // min
+    var percent_per_interval = (DRINKING_INTERVAL / FULL_BOTTLE_INTERVAL);
+    var calced_fraction = dataField.float_to_fraction((1f - percent_per_interval * 5).toDouble(), 0.001d);
+    logger.debug(calced_fraction);
+    return (calced_fraction.equals("7/12"));
 }
