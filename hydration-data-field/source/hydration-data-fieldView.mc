@@ -48,7 +48,6 @@ class hydration_data_fieldView extends WatchUi.SimpleDataField {
   private const MINUTES_TO_SECONDS = 60;
 
   private var _amount_of_bottle_remaining = FULL_BOTTLE_AMOUNT; // .x%
-  private var _times_calced = 0;
   private var _last_timer_seconds = 0;
   private var _timer_stopped_seconds = 0;
   private var _timer_offset_seconds = 0;
@@ -69,18 +68,22 @@ class hydration_data_fieldView extends WatchUi.SimpleDataField {
     // See Activity.Info in the documentation for available information.
     var timer_seconds = (info.timerTime * MILLISECONDS_TO_SECONDS).toNumber();
 
-    var calced_times_refueled = (
+    // calc amount that should be drank by x time
+    var intervals_passed = (
       (timer_seconds - _timer_offset_seconds) /
       (DRINKING_INTERVAL * MINUTES_TO_SECONDS)
     ).toNumber();
-    if (_times_calced != calced_times_refueled) {
-      _times_calced = calced_times_refueled;
 
-      // calc amount remaining
-      var percent_per_interval =
-        DRINKING_INTERVAL.toFloat() / FULL_BOTTLE_INTERVAL.toFloat();
-      _amount_of_bottle_remaining -= percent_per_interval;
-    }
+    var amount_drank =
+      intervals_passed *
+      (DRINKING_INTERVAL.toFloat() / FULL_BOTTLE_INTERVAL.toFloat());
+
+    var full_bottles_drank = (amount_drank / FULL_BOTTLE_AMOUNT).toNumber();
+
+    _amount_of_bottle_remaining =
+      FULL_BOTTLE_AMOUNT * full_bottles_drank +
+      FULL_BOTTLE_AMOUNT -
+      amount_drank;
 
     // Handle resetting after the activity has been stopped/paused for a length of time
     // - could check info.TimerState and calculate time since the state changed
